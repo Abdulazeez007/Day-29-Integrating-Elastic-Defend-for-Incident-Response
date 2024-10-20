@@ -1,7 +1,5 @@
 # Day-29-Integrating-Elastic-Defend-for-Incident-Response
 
-# Integrating Elastic Defend
-
 Today, we’re integrating Elastic Defend, a robust endpoint detection and response (EDR) solution, into our Elastic Stack for enhanced endpoint protection. 
 
 Let's dive in!
