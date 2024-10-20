@@ -14,10 +14,15 @@ Let's dive in!
 6. **Fleet Server**: If using a Fleet Server, manage multiple agents seamlessly.
 7. **Save and Deploy Changes** to complete the setup.
 
+![Alt text](path/to/image.png)
+
 ## Step 2: Verify Installation and Endpoint Status
 
 1. **Navigate to Security > Manage Endpoints**.
 2. You should see your endpoint listed as active, indicating that Elastic Defend is running correctly.
+   
+  ![Alt text](path/to/image.png)
+
 3. **Host Isolation (For Paid Users)**: Host isolation is unavailable in the free tier but is accessible for trial or paid versions. 
 
    **Note**: Free-tier users won't have access to host isolation, but Elastic Defend will still detect and quarantine malware effectively.
@@ -25,9 +30,12 @@ Let's dive in!
 ## Step 3: Testing Elastic Defend with Malware Detection
 
 1. **Simulate Malware Activity**: On your Windows server, terminate the process for `svc-aurora.exe`. Then attempt to run it again—Elastic Defend blocked the action, displaying:
-   - "Operation did not complete successfully because the file contains Malware."
+   - "Operation did not complete successfully because the file contains a virus or potentially unwanted software."
+![Alt text]()
    
 2. **View Telemetry in Elastic**: Navigate to Discover and search for malware. You should see a malware prevention alert, confirming that Elastic Defend blocked the file.
+
+![Alt text](path/to/image.png)
 
 ## Step 4: Investigating Malware Prevention Alerts
 
@@ -37,11 +45,15 @@ Let's dive in!
    - Process Executable
    - File Path
    - File Hash
+  
+   ![Alt text](path/to/image.png)
 
 2. **Set Up a Response Action**: 
    - Scroll to the Response section and click Edit Rule Settings.
    - Configure an automated response action, such as isolating the host when malware is detected.
    - Add a comment (e.g., "Testing response actions") and save changes.
+   
+  ![Alt text](path/to/image.png)
 
 3. **Re-Test the Response**: Configure host isolation, and Elastic Defend isolates the server upon malware detection, blocking further malicious actions.
 
